@@ -1,0 +1,96 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    input:focus + label {
+      transform: translateY(-25px);
+      color: blue;
+    }
+    input:not(:placeholder-shown) + label {
+      transform: translateY(-25px);
+      color: blue;
+    }
+  </style>
+  <body>
+    <div class="form-container">
+      <div class="form-group">
+        <input placeholder="" type="text" />
+        <label for="fancy-input">Your name</label>
+      </div>
+    </div>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fancy Input</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+      }
+
+      .form-container {
+        width: 300px;
+      }
+
+      .form-group {
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px 10px;
+        font-size: 16px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        outline: none;
+      }
+
+      input:focus {
+        border-color: blue;
+      }
+
+      label {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        font-size: 16px;
+        color: #aaa;
+        pointer-events: none;
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+
+      input:focus + label,
+      input:not(:placeholder-shown) + label {
+        top: 0px;
+        left: 8px;
+        font-size: 14px;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="form-group">
+        <input type="text" placeholder=" " id="fancy-input" />
+        <label for="fancy-input">Your name</label>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="container2">
+      <a href="#" style="--clr: #ff22b4; --i: 0">
+        <span> Button</span>
+      </a>
+      <a href="#" style="--clr: #00ccf7; --i: 1">
+        <span> Button</span>
+      </a>
+      <a href="#" style="--clr: #22e625; --i: 2">
+        <span>Button</span>
+      </a>
+    </main>
+  </body>
+
+  <style>
+    a span {
+      color: white;
+      background-color: black !important;
+    }
+    a:hover {
+      background: var(--clr);
+      box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr), 0 0 60px var(--clr),
+        0 0 100px var(--clr);
+    }
+
+    a::before {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 400px;
+      background: var(--clr);
+      transition: 1s;
+      animation: animate 2s linear infinite;
+      animation-delay: calc(0.33s * var(--i));
+    }
+    a:hover::before {
+      width: 120%;
+    }
+    @keyframes animate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    a::after {
+      content: "";
+      position: absolute;
+      background: #0e1538;
+      inset: 4px;
+      width: 100px;
+      height: 100px;
+      transition: 0.5s;
+    }
+    a:hover::after {
+      background: var(--clr);
+    }
+    .container2 {
+      color: white;
+    }
+  </style>
+</html>
